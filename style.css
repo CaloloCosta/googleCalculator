@@ -1,0 +1,50 @@
+.main{
+  border: 0.03px solid buttonface;
+  width: 584px;
+  height: auto;
+  padding: 50px 20px 30px 20px;
+  box-shadow: 0px 4px 4px #f2f0f0;
+  font-family: sans-serif;
+  display: block;
+  margin: auto;
+}
+
+.display{
+  border: 0.001em solid buttonface;
+  height: 50px;
+  margin-bottom: 20px;
+  width: 562px;
+  box-shadow: 0px 1px 4px #f2f0f0;
+  text-align: right;
+  font-size: 2.5em;
+  padding: 6px 15px 0px 2px;
+}
+.keys{
+  margin: auto;
+  padding: 0;
+  margin-top: 15px;
+
+}
+button{
+  width: 76px;
+  padding: 10px 0 10px 0;
+  margin: 0px;
+  margin-right: 4px;
+  margin-bottom: 6px;
+  border: 1px solid #f2f0f0;
+  border-radius: 2px;
+  outline: 0;
+  color: #212529;
+  font-family: sans-serif;
+}
+
+.operator{
+  background-color: buttonface;
+}
+.digit{
+  background-color: #f8f8f8;
+}
+#equals{
+  color: #fff;
+  background-color: #701abc;
+}
