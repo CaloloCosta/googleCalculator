@@ -1,10 +1,7 @@
-/*
-  study the whole code
-  fix % code and add pow method
-*/
 let rad = true;
 let deg = false;
 let button = document.getElementsByTagName("button");
+let key = document.getElementById("key");
 let dis = document.getElementById("display");
 let values = [];
 let equals = false;
@@ -14,13 +11,15 @@ function calculator(){
   eventHandler();
 }
 function eventHandler(){
-  for(let i = 0; i < button.length; i++){
-    button[i].addEventListener("click",()=>{display(button[i]);});
-  }
+  key.addEventListener('click',display);
 }
 function display(data){
-  printOnTheScrean(data,dis);
-  checkEquals(data,dis);
+  let target = event.target;
+  if(target.className == 'digit' || target.className == 'operator' || target.className == 'function'){
+    printOnTheScrean(target,dis);
+    checkEquals(target,dis);
+  }
+  
 }
 function checkEquals(data,dis){
   if(data.textContent == "="){
