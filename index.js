@@ -11,7 +11,14 @@ function calculator(){
   eventHandler();
 }
 function eventHandler(){
+  window.addEventListener('keypress',keyDisplay);
   key.addEventListener('click',display);
+}
+function keyDisplay(){
+  //console.log(String.fromCharCode(event.keyCode));
+  if((event.keyCode >= 48 && event.keyCode <= 57)){
+    printOnTheScrean(String.fromCharCode(event.keyCode),dis);
+  }
 }
 function display(data){
   let target = event.target;
@@ -80,6 +87,9 @@ function printOnTheScrean(data,dis){
     else {
         dis.textContent += ' '+data.textContent+' ';
     }
+  }
+  else if(data >= 0 && data <= 9){
+    insertOrAdd(data,'digit');
   }
   else {
     insertOrAdd(data.textContent,data.className);
